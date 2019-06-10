@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane fx:id="adminGlownyPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projekt4sem.PanelUzytkownikaController">
+   <children>
+      <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="1900.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Odczyty bazy danych">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#odczytTabel" text="Odczyt wszystkich tabel" />
+                  <MenuItem mnemonicParsing="false" onAction="#odczytKwerendy" text="Odczyt wyniku kwerendy" />
+                  <MenuItem mnemonicParsing="false" onAction="#odczytProcedury" text="Odczyt wyniku procedury" />
+                  <MenuItem mnemonicParsing="false" onAction="#odczytWyzwalacza" text="Odczyt wyniku wyzwalacza" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Twoje konto">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onWylogujUser" text="Wyloguj" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Pane layoutY="30.0" prefHeight="950.0" prefWidth="1900.0">
+         <children>
+            <VBox fx:id="panelContent" alignment="CENTER" layoutX="-2.0" prefHeight="950.0" prefWidth="1900.0" style="-fx-background-image: url('file:./image/userTlo.png');" />
+         </children>
+      </Pane>
+   </children>
+</Pane>
